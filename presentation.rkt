@@ -102,8 +102,9 @@
  'next
  (para #:align 'left "+ Gnome Do"))
 
-(slide
- (bitmap (build-path "img" "mac.png")))
+(slide 
+ #:title "Pretty Enough"
+ (cc-superimpose (bitmap (build-path "img" "desktop.png"))))
 
 (slide
  #:title "Intro"
