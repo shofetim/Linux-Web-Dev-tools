@@ -1,6 +1,5 @@
 #lang slideshow
-(require slideshow
-         racket/draw)
+(require racket/draw)
 
 ;; A pict to use behind the main content
 (define fade-bg
@@ -30,6 +29,11 @@
                w h 0 0)
            (- margin))))
 
+(define (evenize-width p)
+  (let ([w (pict-width p)])
+    (inset p 0 0 (+ (- (ceiling w) w)
+                    (modulo (ceiling w) 2)) 0)))
+
 ;; Setup
 (current-slide-assembler
   (lambda (s v-sep p)
@@ -38,7 +42,6 @@
                 (if s
                     (list (evenize-width (if (pict? s) s (titlet s))) p)
                     (list p))))))
-
 
 ;; Slides
 (slide
@@ -50,12 +53,14 @@
  (colorize (it "Jordan Schatz") "blue")
  (text "jordan@noionlabs.com" '(bold . modern) 25)
  (para #:align 'center
-       "Download the presentation, code etc at:"
+       "Download the presentation and files at:"
        "github.com/shofetim/Linux-Web-Dev-tools"))
 
 (slide
  #:title "Why I develop on Linux"
- (colorize (tt "\"If you want to learn to program, learn linux\"") "blue"))
+ 'alts 
+ (list (list (colorize (tt "\"If you want to learn to program, learn linux\"") "blue"))
+       (list (t "It was good advice"))))
 
 (slide
  #:title "Do other people develop on linux?"
@@ -68,3 +73,84 @@
  'next (item "Support from virtualization providers")
  'next (item "Universities that require unix knowledge")
 )
+
+(slide
+ #:title "Other 'nix systems"
+ (item "Memory utilization")
+ (item "TCP stack")
+ (item "Security")
+ (item "Speed")
+ (colorize (t "Stayed with linux") "blue"))
+
+(slide
+ #:title "Alot of people use Mac"
+ (size-in-pixels
+  (bitmap (build-path "img" "mac.png")))
+ 'next
+ (t "Its pretty")
+ 'next
+ (t "it \"Just Works\"")
+ 'next
+ (t "(maybe)"))
+
+(slide
+ (titlet "I use: ")
+ 'next
+ (para #:align 'left "+ Mutter")
+ 'next
+ (para #:align 'left "+ AWN")
+ 'next
+ (para #:align 'left "+ Gnome Do"))
+
+(slide
+ (bitmap (build-path "img" "mac.png")))
+
+(slide
+ #:title "Intro"
+ (para
+  "Mostly if you are writing code everyday you just get good at your language,"
+   "platform/framework, editor, revision control system, and maybe a good"
+   "statistical analysis tool / linter. But going over those would just be"
+   "interesting to someone who is also a pro dev...")
+ (para "But to handle everything that comes up one needs a full toolbox of tools,"
+        "and most of them are great for casual use to."))
+(start-at-recent-slide)
+
+(slide
+ #:title "Firebug / Developer Tools")
+
+(slide
+ #:title "HTTPFox (or Wireshark)")
+
+(slide
+ #:title "Chrome Sniffer")
+
+(slide
+ #:title "Curl")
+
+(slide
+ #:title "Pagespeed / ySlow")
+
+(slide
+ #:title "AB (apache benchmark")
+
+(slide
+ #:title "Memory Usage")
+
+(slide
+ #:title "rxvt-unicode & screen")
+
+(slide
+ #:title "Virtualbox")
+
+(slide
+ #:title "Gimp & Inkscape")
+
+(slide
+ #:title "SLOCC")
+
+(slide
+ #:title "CutyCapt")
+
+(slide
+ #:title "CI Joe")
