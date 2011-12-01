@@ -60,7 +60,7 @@
  #:title "Why I develop on Linux"
  'alts 
  (list (list (colorize (tt "\"If you want to learn to program, learn linux\"") "blue"))
-       (list (t "It was good advice"))))
+       (list (tt "It was good advice"))))
 
 (slide
  #:title "Do other people develop on linux?"
@@ -107,18 +107,53 @@
  (cc-superimpose (bitmap (build-path "img" "desktop.png"))))
 
 (slide
- #:title "Intro"
- (para
-  "Mostly if you are writing code everyday you just get good at your language,"
-   "platform/framework, editor, revision control system, and maybe a good"
-   "statistical analysis tool / linter. But going over those would just be"
-   "interesting to someone who is also a pro dev...")
- (para "But to handle everything that comes up one needs a full toolbox of tools,"
-        "and most of them are great for casual use to."))
-(start-at-recent-slide)
+ (text "It Works" '(bold . modern) 40))
 
 (slide
- #:title "Firebug / Developer Tools")
+ #:title "A developer's tools"
+ 'alts
+ (list
+  (list
+   (hc-append
+    (bitmap (build-path "img" "php.jpg"))
+    (bitmap (build-path "img" "emacs.png"))
+    (bitmap (build-path "img" "git.png"))))
+  (list
+   (titlet "Or maybe")
+   (hc-append
+    (bitmap (build-path "img" "racket.png"))
+    (bitmap (build-path "img" "emacs.png"))
+    (bitmap (build-path "img" "git.png"))))))
+
+(slide
+ #:title "But that isn't a full toolbox"
+ (bitmap (build-path "img" "toolbox.jpg")))
+
+(slide
+ #:title "Tools"
+ 'alts 
+ (list
+  (list
+   (item "Firebug / Developer Tools")
+   (item "HTTPFox")
+   (item "Chrome Sniffer")
+   (item "Curl")
+   (item "Pagespeed / ySlow")
+   (item "AB (Apache Benchmark"))
+  (list
+   (item "htop + nameless python script")
+   (item "rxvt-unicode + screen")
+   (item "Virtualbox")
+   (item "Gimp & Inkscape")
+   (item "SLOCC")
+   (item "CutyCapt")
+   (item "CI Joe"))))
+
+(slide
+ #:title "Firebug / Developer Tools"
+ )
+
+(start-at-recent-slide)
 
 (slide
  #:title "HTTPFox (or Wireshark)")
