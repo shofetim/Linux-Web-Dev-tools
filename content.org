@@ -1,0 +1,14 @@
+* Presentation
+** Why I develop on linux
+   If you really want to learn to code, learn linux.
+** Do other people choose linux / stats
+   - Websites deployed on linux
+   - Languages/tools treat posix as the only first class citizen
+     - epoll/kqueue as an example
+     - node.js as an example
+     - PHP https detection as an example
+   - Discuss .Net
+** So alot of people use Mac
+   Its pretty
+   Mutter + AWN + Gnome-do = pretty enough lets move on
+** 
