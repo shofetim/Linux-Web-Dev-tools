@@ -1,9 +1,11 @@
 * Linux web dev tools
 ** About
+   Thursday, 01. December 2011
    This is a presentation I gave to the local LUG about why I develop on linux,
-   and some of the tools I use.
+   and some generally useful tools I use.
 ** Running
    This presentation is a [[racket-lang.org][racket]] slideshow. Install racket and then:
 
-   To run the slideshow: slideshow presentation.rkt
-   To generate a PDF: slideshow --pdf presentation.rkt
+   - To run the slideshow: slideshow presentation.rkt
+     
+   - To generate a PDF: slideshow --pdf presentation.rkt
