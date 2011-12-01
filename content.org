@@ -8,7 +8,38 @@
      - node.js as an example
      - PHP https detection as an example
    - Discuss .Net
+   - Remote administration / control
+   - Support by virtualization providers
+   - Universities that require unix knowledge
+** A look at other 'nix systems
+   Memory utilization
+   TCP stack
+   Security
+   Speed
+   Stayed with Linux
 ** So alot of people use Mac
    Its pretty
    Mutter + AWN + Gnome-do = pretty enough lets move on
-** 
+** Intro
+   Mostly if you are writing code everyday you just get good at your language,
+   platform/framework, editor, revision control system, and maybe a good
+   statistical analysis tool / linter. But going over those would just be
+   interesting to someone who is also a pro dev...
+
+   But to handle everything that comes up one needs a full toolbox of tools, and
+   most of them are great for casual use to.
+** Firebug / Developer tools
+** HTTPFox (or wireshark)
+** Chrome sniffer
+** Curl -iv   
+** PageSpeed/ySlow
+** AB (apache benchmark)
+** Memory Usage
+*** htop
+*** Python script
+** screen
+** virtualbox   
+** Gimp + Inkscape
+** SLOCC
+** CutyCapt
+** CI Server   
