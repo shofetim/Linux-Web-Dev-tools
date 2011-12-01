@@ -1,18 +1,27 @@
 #lang slideshow
-(require openssl/sha1 ;;Required for sha1 example
-         slideshow
-         slideshow/code) 
+(require slideshow)
 
 (slide
- #:title "Git 1 2 3!"
- (para #:align 'center
-       "A fast introduction to git for professionals")
+ (titlet "Linux Web Dev")
  (blank)
- (para #:align 'center
-       "Jordan Schatz"
-       (text "jordan@noionlabs.com" '(bold . modern) 25))
+ (size-in-pixels
+  (bitmap (build-path "img" "linux.png")))
  (blank)
+ (colorize (it "Jordan Schatz") "blue")
+ (text "jordan@noionlabs.com" '(bold . modern) 25)
  (para #:align 'center
-       "You can fork this presentation at:"
-       "https://github.com/shofetim/git-1-2-3")
- (blank))
+       "Download the presentation, code etc at:"
+       "github.com/shofetim/Linux-Web-Dev-tools"))
+
+
+(slide
+ #:title "More Paragraph Alignment"
+ (frame
+  (para #:align 'center
+        "The" (tt "#:align 'center") "option for" (tt "para") "generates"
+        "a paragraph with centered lines of text"))
+ (frame
+  (para "This line uses the" (tt "#:fill? #f") "option"))
+ (para "The" (tt "#:fill? #f") "option creates a paragraph"
+            "that is wrapped to fit the slide, but it allows"
+            "the resulting pict to be more narrow than the slide"))

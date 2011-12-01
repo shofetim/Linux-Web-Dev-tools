@@ -37,7 +37,7 @@
 ** Memory Usage
 *** htop
 *** Python script
-** screen
+** rxvt-unicode & screen
 ** virtualbox   
 ** Gimp + Inkscape
 ** SLOCC
