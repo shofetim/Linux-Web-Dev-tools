@@ -241,7 +241,7 @@
  'alts
  (list
   (list (colorize (t "https://github.com/defunkt/cijoe") "green")
-        (bitmap (build-path "img" "ci-joe.png")))
+        (size-in-pixels (bitmap (build-path "img" "ci-joe.png"))))
   (list
    (t "or a simple githook")
    (vl-append
