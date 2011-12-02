@@ -78,6 +78,7 @@
    'next (item "PHP")
    'next (item "etc."))
   (list (tt "What about .NET?")
+        'next
         (t "Mono"))
   (list (tt "Other things")
         (item "epoll/kqueue")
@@ -158,57 +159,95 @@
   (list
    (item "Firebug / Developer Tools")
    (item "HTTPFox")
-   (item "Chrome Sniffer")
    (item "Curl")
    (item "Pagespeed / ySlow")
-   (item "AB (Apache Benchmark"))
+   (item "htop + nameless python script"))
   (list
-   (item "htop + nameless python script")
    (item "rxvt-unicode + screen")
-   (item "Virtualbox")
    (item "Gimp & Inkscape")
    (item "SLOCC")
    (item "CutyCapt")
    (item "CI Joe"))))
 
+;;TODO
 (slide
  #:title "Firebug / Developer Tools"
- )
+ (t "Demo"))
 
-;;(start-at-recent-slide)
+;;TODO
+(slide
+ #:title "HTTPFox"
+ (tt "A packet sniffer (as a Firefox Extension)")
+ (t "Demo"))
 
 (slide
- #:title "HTTPFox (or Wireshark)")
+ #:title "Curl"
+ (tt "Manipulate HTTP")
+ (t "Great for seeing what a site is running...")
+ (size-in-pixels (bitmap (build-path "img" "curl.png"))))
+
+;;TODO
+(slide
+ #:title "Pagespeed / ySlow"
+ (tt "Measure why pages are load slowly")
+ (t "Demo"))
 
 (slide
- #:title "Chrome Sniffer")
+ #:title "Memory Usage"
+ 'alts
+ (list
+  (list 
+   (titlet "Htop")
+   (size-in-pixels (bitmap (build-path "img" "htop.png"))))
+  (list 
+   (titlet "ps_mem.py")
+   (size-in-pixels (bitmap (build-path "img" "ps_mem.jpg"))))))
+
+;;TODO
+(slide
+ #:title "rxvt-unicode & screen"
+ (tt "A good / memory lite terminal + screen")
+ (size-in-pixels (bitmap (build-path "img" "screen.png"))))
 
 (slide
- #:title "Curl")
+ #:title "Gimp & Inkscape"
+ (item "Gimp works well as a Photoshop replacement")
+ (item "Inkscape is a great vector graphics editor")
+ (item "Imagemagic is also handy, particularly from the commandline or scripts"))
 
 (slide
- #:title "Pagespeed / ySlow")
+ #:title "SLOCC"
+ 'alts
+ (list
+  (list
+   (tt "Source Lines of Code Count")
+   (item (colorize (t "http://www.dwheeler.com/sloccount/") "green"))
+   (item "Knows most common languages")
+   (item "You should know how big your own codebase is...")
+   (item "Great for getting the feel for a new codebase")
+   (item "Helpful in picking which app to use for your CMS etc"))
+  (list
+   (tt "CakePHP")
+   (size-in-pixels (bitmap (build-path "img" "slocc.png"))))))
 
 (slide
- #:title "AB (apache benchmark")
+ #:title "CutyCapt"
+ (t "Scriptable, full page, website screen capture tool")
+ (t "PNG or PDF output...")
+ (colorize (t "http://cutycapt.sourceforge.net/") "green"))
 
 (slide
- #:title "Memory Usage")
+ #:title "CI Joe or Git Hook"
+ 'alts
+ (list
+  (list (colorize (t "https://github.com/defunkt/cijoe") "green")
+        (bitmap (build-path "img" "ci-joe.png")))
+  (list
+   (t "or a simple githook")
+   (vl-append
+    (tt "#!/bin/sh")
+    (tt "cd ..")
+    (tt "env -i git reset --hard")))))
 
 (slide
- #:title "rxvt-unicode & screen")
-
-(slide
- #:title "Virtualbox")
-
-(slide
- #:title "Gimp & Inkscape")
-
-(slide
- #:title "SLOCC")
-
-(slide
- #:title "CutyCapt")
-
-(slide
- #:title "CI Joe")
+ (tt "End"))
