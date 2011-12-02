@@ -64,22 +64,44 @@
 
 (slide
  #:title "Do other people develop on linux?"
- 'next (item "Websites deployed on linux")
- 'next (item "languages/tools treat posix as the only first class citizen")
- 'next (subitem "epoll/kqueue")
- 'next (subitem "node.js")
- 'next (item ".NET")
- 'next (item "Remote administration / control")
- 'next (item "Support from virtualization providers")
- 'next (item "Universities that require unix knowledge")
-)
+ 'alts
+ (list 
+  (list (para "I found a very wide range of stats, alot of them disagree, these"
+           "numbers are an educated guess from what I found, and my experience"))
+  (list
+   (tt "Websites")
+   (t "80% + deployed on Linux"))
+  (list
+   (tt "Languages")
+   (para "For many (most?) tools and languages posix is the only first class citizen")
+   'next (item "Node.js")
+   'next (item "PHP")
+   'next (item "etc."))
+  (list (tt "What about .NET?")
+        (t "Mono"))
+  (list (tt "Other things")
+        (item "epoll/kqueue")
+        'next
+        (item "Support from virtualization providers")
+        'next
+        (item "Cost")
+        'next
+        (item "Ease of remote administration")
+        'next
+        (item "etc."))))
 
 (slide
- #:title "Other 'nix systems"
- (item "Memory utilization")
+ #:title "Other *nix systems"
+ (tt "I recently looked at alternative *nix systems")
+ 'next
+ (item "Memory footprint")
+ 'next
  (item "TCP stack")
+ 'next
  (item "Security")
+ 'next
  (item "Speed")
+ 'next
  (colorize (t "Stayed with linux") "blue"))
 
 (slide
@@ -153,7 +175,7 @@
  #:title "Firebug / Developer Tools"
  )
 
-(start-at-recent-slide)
+;;(start-at-recent-slide)
 
 (slide
  #:title "HTTPFox (or Wireshark)")
